@@ -1,0 +1,20 @@
+{
+  "name": "mvp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix backend",
+    "install-client": "npm install --prefix frontend",
+    "install": "npm run install-server && npm run install-client",
+    "server": "npm run watch --prefix backend",
+    "client": "npm start --prefix frontend",
+    "watch": "concurrently \"npm run server\" \"npm run client\"",
+    "deploy": "npm run build --prefix frontend && npm start --prefix backend",
+    "deploy-cluster": "npm run build --prefix frontend && npm run cluster --prefix backend",
+    "test": "npm test --prefix backend && npm test --prefix frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
