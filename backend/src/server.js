@@ -3,7 +3,7 @@ const http = require('http');
 require('dotenv').config();
 
 const app = require('./app');
-const { mongoConnect } = require('./util/mongo');
+const { mongoConnect } = require('./utils/mongo');
 
 
 const PORT = process.env.PORT || 8000;
